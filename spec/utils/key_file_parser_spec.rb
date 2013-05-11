@@ -25,4 +25,10 @@ describe Barometer::Utils::KeyFileParser do
       Barometer::Utils::KeyFileParser.find(:weather_bug, :code).should be_nil
     end
   end
+
+  it "returns nil when HOME is not set" do
+    stub_const "Barometer::KEY_FILE", nil
+    Barometer::Utils::KeyFileParser.find(:weather_bug, :code).should be_nil
+  end
+
 end
