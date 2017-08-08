@@ -13,5 +13,6 @@ group :test do
   gem 'barometer-support', '>= 0.0.4'
   gem 'webmock'
   gem 'vcr'
+  gem 'multi_json' # for VCR serialization
   gem 'coveralls', require: false
 end
